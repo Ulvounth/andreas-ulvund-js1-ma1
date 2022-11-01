@@ -14,7 +14,7 @@ const cats = [
 
 // Question 1
 
-let cat = {
+const cat = {
   complain: function () {
     console.log("Meow!");
   },
@@ -23,7 +23,7 @@ cat.complain();
 
 // Question 2
 
-let heading = document.querySelector("h3");
+const heading = document.querySelector("h3");
 
 heading.innerHTML = "Updated heading";
 
@@ -37,10 +37,24 @@ heading.className = "Subheading";
 
 // Question 5
 
-let paragraphs = document.querySelectorAll("p");
+const paragraphs = document.querySelectorAll("p");
 
 for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.color = "red";
 }
 
 // Question 6
+
+const resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>New paragraph</p>";
+resultsContainer.style.background = "yellow";
+
+// Question 7
+
+function catNames(list) {
+  for (let i = 0; i < list.length; i++) {
+    console.log(list[i].name);
+  }
+}
+catNames(cats);
