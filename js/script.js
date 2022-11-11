@@ -58,3 +58,26 @@ function catNames(list) {
   }
 }
 catNames(cats);
+
+// Question 8
+
+function createCats(cats) {
+  let html = "";
+
+  for (let i = 0; i < cats.length; i++) {
+    let catsAge = "Age unknown";
+
+    if (cats[i].age) {
+      catsAge = cats[i].age;
+    }
+    html += `<div>
+                    <h5>${cats[i].name}</h5>
+    <p>${catsAge}</p>
+    </div>`;
+  }
+  return html;
+}
+
+const newHtml = createCats(cats);
+const catContainer = document.querySelector(".cat-container");
+catContainer.innerHTML = newHtml;
